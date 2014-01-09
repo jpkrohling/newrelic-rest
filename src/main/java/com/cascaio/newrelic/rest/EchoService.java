@@ -1,5 +1,7 @@
 package com.cascaio.newrelic.rest;
 
+import com.newrelic.api.agent.Trace;
+
 import javax.ejb.Stateless;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -12,6 +14,7 @@ import javax.ws.rs.Path;
 @Path("/echo")
 public class EchoService {
     @GET
+    @Trace
     public String get() {
         return "echo echo echo";
     }
