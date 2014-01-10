@@ -14,7 +14,7 @@ import javax.ws.rs.Path;
 @Path("/echo")
 public class EchoService {
     @GET
-    @Trace
+    @Trace(dispatcher = true)
     public String get() {
         return "echo echo echo";
     }
